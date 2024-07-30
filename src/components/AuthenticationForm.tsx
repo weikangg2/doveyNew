@@ -98,15 +98,14 @@ export function AuthenticationForm({
                 <PopoverContent className="w-auto p-0" align="start">
                   <Calendar
                     defaultMonth={new Date("2022-08-01")}
-                    showWeekNumber = {false}
+                    showWeekNumber={false}
+                    showOutsideDays={false}
                     mode="single"
-                    hideWeekdays={true} 
                     selected={field.value}
                     onSelect={field.onChange}
                     disabled={(date) =>
                       date > new Date() || date < new Date("1900-01-01")
                     }
-                    initialFocus
                   />
                 </PopoverContent>
               </Popover>
