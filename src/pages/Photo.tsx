@@ -8,13 +8,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { CarouselDialog } from "@/components/CarouselDialog"; // Import the dialog component
 
 const Photo: React.FC = () => {
   return (
     <div className="container mx-auto p-4">
-      <Card className="w-full max-w-lg mx-auto">
+      <Card className="w-full max-w-md mx-auto">
         <CardHeader>
           <CardTitle>Birthday Photo Carousel</CardTitle>
           <CardDescription>

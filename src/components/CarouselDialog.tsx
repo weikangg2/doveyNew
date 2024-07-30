@@ -18,7 +18,7 @@ export function CarouselDialog() {
       <DialogTrigger asChild>
         <Button variant="outline">Open Carousel</Button>
       </DialogTrigger>
-      <DialogContent className="w-full max-w-full p-6">
+      <DialogContent className="w-[90%] max-w-full p-6">
         <DialogHeader>
           <DialogTitle>Photo Carousel</DialogTitle>
           <DialogDescription>
