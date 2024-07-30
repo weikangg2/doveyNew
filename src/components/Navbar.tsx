@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
           to="/"
           className="text-lg font-semibold text-gray-800 hover:text-gray-600 dark:text-white dark:hover:text-gray-300"
         >
-          DoveyXChong Anniversary
+          DoveyXChong
         </Link>
         <div className="flex items-center space-x-4">
           <NavigationMenu>

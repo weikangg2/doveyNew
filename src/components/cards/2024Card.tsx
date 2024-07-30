@@ -11,8 +11,7 @@ import { Button } from "@/components/ui/button";
 import { DialogClose } from "@/components/ui/dialog";
 
 const Card2024: React.FC = () => {
-  const cardText =
-    `Hello this is a testttttttttttttttttttttttttttttttttttt
+  const cardText = `Hello this is a testttttttttttttttttttttttttttttttttttt
     tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt`;
   return (
     <Card>

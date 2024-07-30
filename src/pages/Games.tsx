@@ -25,11 +25,11 @@ const games = [
     badge: "Wow", // Example badge text
   },
   {
-    image: "/path/to/game-image2.png",
-    name: "Game Two",
-    description: "Description of game two.",
-    link: "/game-two", // Example link
-    badge: "Hot", // Example badge text
+    image: "/snake.jpeg",
+    name: "Snake Game",
+    description: "Play the classic Snake game and eat the food.",
+    link: "/game-four", // Link to the Snake game page
+    badge: "New", // Example badge text
   },
 ];
 
