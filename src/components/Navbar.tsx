@@ -133,6 +133,7 @@ const Navbar: React.FC = () => {
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
+                <ModeToggle />
               </NavigationMenuList>
             </NavigationMenu>
           )}

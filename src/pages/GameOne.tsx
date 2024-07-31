@@ -13,18 +13,19 @@ import { useToast } from "@/components/ui/use-toast";
 import { ToastAction } from "@/components/ui/toast";
 import GameMenubar from "@/components/GameMenuBar";
 
-const images = [
-  "/puzzleOne.jpg",
-  "/puzzleTwo.jpg",
-  "/puzzleThree.jpg",
-  // Add more image paths as needed
-];
+const puzzleCount = 4;
+const photoCount = 40;
+
+const puzzles = Array.from({ length: puzzleCount }, (_, i) => `puzzle${i + 1}.jpg`);
+const photos = Array.from({ length: photoCount }, (_, i) => `photo${i + 1}.jpg`);
+
+const allImages = [...puzzles, ...photos];
 
 const GameOne: React.FC = () => {
   const { toast } = useToast();
   const [rows, setRows] = useState(3);
-  const [columns, setColumns] = useState(4);
-  const [currentImage, setCurrentImage] = useState(images[0]);
+  const [columns, setColumns] = useState(3);
+  const [currentImage, setCurrentImage] = useState(allImages[0]);
 
   const handlePuzzleSolved = () => {
     toast({
@@ -36,8 +37,8 @@ const GameOne: React.FC = () => {
   };
 
   const handleRandomImage = () => {
-    const randomIndex = Math.floor(Math.random() * images.length);
-    setCurrentImage(images[randomIndex]);
+    const randomIndex = Math.floor(Math.random() * allImages.length);
+    setCurrentImage(allImages[randomIndex]);
   };
 
   return (
