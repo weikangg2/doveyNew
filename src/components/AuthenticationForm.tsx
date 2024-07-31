@@ -144,9 +144,9 @@ export function AuthenticationForm({
           name="ic"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Wei's last 4 Digits IC</FormLabel>
+              <FormLabel>Wei's IC</FormLabel>
               <FormControl>
-                <Input placeholder="Enter Wei's last 4 digits IC" {...field} />
+                <Input placeholder="Enter Wei's IC" {...field} />
               </FormControl>
               <FormDescription>
                 This is used to verify you are dovey.
