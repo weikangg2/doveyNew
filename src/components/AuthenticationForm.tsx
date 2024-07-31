@@ -33,6 +33,9 @@ const FormSchema = z.object({
   username: z.string().min(2, {
     message: "Username must be at least 2 characters.",
   }),
+  ic: z.string().min(2, {
+    message: "IC must be at least 2 characters.",
+  }),
 });
 
 export function AuthenticationForm({
@@ -45,13 +48,15 @@ export function AuthenticationForm({
     defaultValues: {
       dob: new Date("2022-08-01"), // Set the default date here
       username: "",
+      ic: "",
     },
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     const isAuth =
-      format(data.dob, "PPP") === "August 17th, 2022" &&
-      data.username === "821308";
+      format(data.dob, "PPP") === import.meta.env.VITE_AUTH_DOB &&
+      data.username === import.meta.env.VITE_AUTH_USERNAME &&
+      data.ic === import.meta.env.VITE_AUTH_IC;
 
     if (isAuth) {
       toast({
@@ -125,6 +130,23 @@ export function AuthenticationForm({
               <FormLabel>Wei's Postal code</FormLabel>
               <FormControl>
                 <Input placeholder="Enter Wei's postal code" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is used to verify you are dovey.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="ic"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Wei's last 4 Digits IC</FormLabel>
+              <FormControl>
+                <Input placeholder="Enter Wei's last 4 digits IC" {...field} />
               </FormControl>
               <FormDescription>
                 This is used to verify you are dovey.
